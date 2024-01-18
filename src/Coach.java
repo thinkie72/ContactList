@@ -1,17 +1,21 @@
-public class Worker extends Person {
-    private int salary;
+public class Coach extends Person {
+    // Instance variable
+    private String sport;
 
-    public Worker(String firstName, String lastName, String phoneNumber, int salary) {
+    // Constructor
+    public Coach(String firstName, String lastName, String phoneNumber, String sport) {
         super(firstName, lastName, phoneNumber);
-        this.salary = salary;
+        this.sport = sport;
     }
 
-    public int getSalary() {
-        return salary;
+    // Accessor method
+    public String getSport() {
+        return sport;
     }
 
+    // Overrides person toString to add the sport on the end
     @Override
     public String toString() {
-        return super.toString() + " Salary: " + salary;
+        return super.toString() + " Sport: " + sport;
     }
 }
