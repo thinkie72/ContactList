@@ -33,7 +33,7 @@ public class ContactList {
         String s2;
         // Size variable to prevent the need to call size() on every iteration
         int size = contacts.size();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
                 // If statements to find the attribute to sort by, based on its number on the menu
                 if (sortBy == 2) {
