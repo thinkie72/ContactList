@@ -37,18 +37,18 @@ public class ContactList {
             for (int j = 0; j < size - i - 1; j++) {
                 // If statements to find the attribute to sort by, based on its number on the menu
                 if (sortBy == 2) {
-                    s1 = contacts.get(i).getFirstName();
-                    s2 = contacts.get(i + 1).getFirstName();
+                    s1 = contacts.get(j).getFirstName();
+                    s2 = contacts.get(j + 1).getFirstName();
                 } else if (sortBy == 3) {
-                    s1 = contacts.get(i).getLastName();
-                    s2 = contacts.get(i + 1).getLastName();
+                    s1 = contacts.get(j).getLastName();
+                    s2 = contacts.get(j + 1).getLastName();
                 } else {
-                    s1 = contacts.get(i).getPhoneNumber();
-                    s2 = contacts.get(i + 1).getPhoneNumber();
+                    s1 = contacts.get(j).getPhoneNumber();
+                    s2 = contacts.get(j + 1).getPhoneNumber();
                 }
                 // Compares s1 to s2 after the values are found based on the selected menu item
                 if (s1.compareTo(s2) > 0)
-                    swap(i);
+                    swap(j);
             }
         }
     }
